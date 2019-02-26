@@ -5,7 +5,7 @@
 
  - [X] 1. The number of occurrences of “things”
  - [ ] 2. The total size of the string at the start
- - [ ] 3. The total number of words in the verse
+ - [X] 3. The total number of words in the verse
  - [X] 4. Replace “favorite” with “java”
  - [ ] 5. Characters at locations 201 and 305
  - [X] 6. The index location of “dog”
