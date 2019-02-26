@@ -17,5 +17,11 @@ class charat {
     char ch1 = getCharFromString(str, index1);
 
 		System.out.println("The character at location 201 is :- "+ ch +"\nand at location 305 it's :- "+ch1);
+
+		String[] result = str.split(" ", 2);
+		String first = result[0];
+		int size = first.length();
+		int bytesize = (Character.SIZE/8)*size;
+		System.out.println("the length of " + first + " is "+size+ " That is "+bytesize+ "bytes");
 	}
 }
