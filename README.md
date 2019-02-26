@@ -9,5 +9,5 @@
  - [X] 4. Replace “favorite” with “java”
  - [ ] 5. Characters at locations 201 and 305
  - [X] 6. The index location of “dog”
- - [ ] 7. The substring between location 50 to 70
+ - [X] 7. The substring between location 50 to 70
  - [X] 8. Switch the occurrence of “strudels” with “schnitzel"
