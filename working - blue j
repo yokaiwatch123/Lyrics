@@ -1,0 +1,131 @@
+//Main\\
+
+public class Myfavthings3
+{
+public static void main (String [] args) {
+String str = "Raindrops on roses and whiskers on kittens\n bright copper kettles and warm woolen mittens\n Brown paper packages tied up with strings\n These are a few of my favorite things\n Cream colored ponies and crisp apple strudels\n Doorbells and sleighbells and schnitzel with noodles\n Wild geese that fly with the moon on their wings\n These are a few of my favorite things\n Girls in white dresses, with blue satin sashes\n Snowflakes that stay on my nose and eyelashes\n Silver white winters that melt into springs\n These are a few of my favorite things\n When the dog bites, when the bee stings\n When I'm feeling sad\n I simply remember my favorite things\n Like silver white winter that melt into springs\n And then I don't feel so bad";
+String str2 = "Raindrops on roses and whiskers on kittens"; 
+String word = "things";
+char ch, ch1;
+int index, index1;
+index = 201;
+index1=305;
+Myfavthings2 lyrics3 = new Myfavthings2();
+lyrics3.getStr();
+lyrics3.getWords();
+lyrics3.getWordcount();
+lyrics3.getCharletters2(str2);
+lyrics3.getLettercount2();
+lyrics3.getCharletters(str);
+lyrics3.getLettercount();
+lyrics3.getSpacecount();
+lyrics3.getOccurancethings();   
+lyrics3.getOccurancethings2();   
+//location index
+ch = str.charAt(201);
+System.out.println(ch);
+
+ch1=str.charAt(305);
+System.out.println(ch1);
+// find char locations substring and replace 
+String subst = new String("dog");
+System.out.print("\n\nFound dog at : ");
+System.out.print(str.indexOf(subst));
+//java
+System.out.println("\n\n After replacing 'favorite' with 'java'\n"+str.replaceFirst("favorite", "java"));
+//schnitzels
+System.out.println("\n\n After replacing 'strudels' with 'schnitzels'\n"+str.replaceFirst("strudels", "schnitzels"));
+//substr
+System.out.print("\n\n Substrings between '50 and 70' are : ");
+System.out.println(str.substring(50, 70));
+
+}
+}
+------------------------------------------------------------------------------------------------------------------------
+
+//class\\
+public class Myfavthings2 {
+private String str, word, a , str2;
+private int  i , max,count,letterCount,space, things2 , count2, letterCount2; 
+//private char temp ;
+//char th[] = new char [str.length()];
+public Myfavthings2(){
+str = "Raindrops on roses and whiskers on kittens\n bright copper kettles and warm woolen mittens\n Brown paper packages tied up with strings\n These are a few of my favorite things\n Cream colored ponies and crisp apple strudels\n Doorbells and sleighbells and schnitzel with noodles\n Wild geese that fly with the moon on their wings\n These are a few of my favorite things\n Girls in white dresses, with blue satin sashes\n Snowflakes that stay on my nose and eyelashes\n Silver white winters that melt into springs\n These are a few of my favorite things\n When the dog bites, when the bee stings\n When I'm feeling sad\n I simply remember my favorite things\n Like silver white winter that melt into springs\n And then I don't feel so bad";
+str2 = "Raindrops on roses and whiskers on kittens";
+word = "things";
+//things2 = 0;
+i = 0 ;
+letterCount = 0;
+letterCount2=0;
+space=0;
+things2=0;
+count2 = 0;
+//index=201;
+//index=305;
+}
+public String getStr(){
+System.out.println( "lyrics : " + str );
+return str;    
+    
+}
+public void getWords(){ 
+char th[] = new char [str.length()];
+//System.out.println ("My favorite things lyrics :" + str);
+for (i = 0; i < str.length() - 1 ; i ++){
+ th[i]= str.charAt(i);  
+ if( ((i>0)&&(th[i]!=' ')&&(th[i-1]==' ')) || (th[0]!=' ')&&(i==0))   
+ count++;  
+}  
+}  
+ 
+public int getWordcount(){  
+ System.out.println ("word count:"  + count );
+ return count;
+ //System.out.println ("word count:" + count );
+}
+// str2
+public void getCharletters2(String str) {
+for (int i  = 0 ; i < str2.length(); i ++) {
+if (Character.isLetter(str2.charAt(i))) {
+letterCount2++;
+}
+}
+}
+public int getLettercount2(){
+//System.out.println ("Beginning str size: " + str.length());
+System.out.println("Beginning str size: " + letterCount2);
+return letterCount2;
+}
+//str2
+// whole verse string
+public void getCharletters(String str) {
+for (int i  = 0 ; i < str.length(); i ++) {
+if (Character.isLetter(str.charAt(i))) {
+letterCount++;
+}
+else if (Character.isSpaceChar(str.charAt(i))){
+space++;
+}
+}
+}
+public int getLettercount(){
+//System.out.println ("Beginning str size: " + str.length());
+System.out.println ("Letter count: " + letterCount);
+return letterCount;
+}
+public int getSpacecount(){
+System.out.println("Space count:" +  space);
+return space; 
+}
+//whole verse string
+//occurance
+public void getOccurancethings() {
+
+things2 = str.split("things").length - 1;
+}
+public int getOccurancethings2(){
+System.out.println("occurance of things :  " +  things2);
+return things2;
+    
+}
+}
